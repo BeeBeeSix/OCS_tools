@@ -58,9 +58,11 @@ impl App {
         match self.mode {
             ExportMode::CsvOnly => "csv",
             ExportMode::Tin12daOnly => "12da",
+            ExportMode::Tin12dazOnly => "12daz",
             ExportMode::Both | ExportMode::XmlOnly | ExportMode::All => "xml",
         }
     }
+
 
     fn refresh(&mut self, ctx: &egui::Context) {
         let (min_z, max_z) = (Self::parse_z(&self.min_z_str), Self::parse_z(&self.max_z_str));
@@ -125,12 +127,13 @@ impl eframe::App for App {
                                 || ui.selectable_value(&mut self.mode, ExportMode::XmlOnly, "XML").clicked()
                                 || ui.selectable_value(&mut self.mode, ExportMode::CsvOnly, "CSV").clicked()
                                 || ui.selectable_value(&mut self.mode, ExportMode::Tin12daOnly, "12da").clicked()
+								|| ui.selectable_value(&mut self.mode, ExportMode::Tin12dazOnly, "12daz").clicked()
                                 || ui.selectable_value(&mut self.mode, ExportMode::All, "All").clicked();
                             if changed && !self.out_path.is_empty() {
                                 self.out_path = PathBuf::from(&self.out_path).with_extension(self.default_ext()).display().to_string();
                             }
                         });
-                        if matches!(self.mode, ExportMode::Tin12daOnly | ExportMode::All) {
+                        if matches!(self.mode, ExportMode::Tin12daOnly | ExportMode::Tin12dazOnly | ExportMode::All) {
                             ui.separator();
                             ui.label("12da TIN Options");
                             ui.horizontal(|ui| {
@@ -147,6 +150,7 @@ impl eframe::App for App {
                             });
                             ui.separator();
                         }
+
                         ui.label(format!("Est. Export Points: {}", self.est_points));
                         if ui.button("Import Boundary (.shp / .geojson)").clicked() {
                             if let Some(p) = rfd::FileDialog::new().add_filter("Boundary", &["shp", "geojson", "json"]).pick_file() {
