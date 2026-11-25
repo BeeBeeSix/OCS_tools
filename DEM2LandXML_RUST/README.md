@@ -1,3 +1,4 @@
-# OCS_tools
-<img width="1318" height="970" alt="image" src="https://github.com/user-attachments/assets/699b78ae-825e-49e4-8983-9a57d01e73b5" />
+# OCS_tools: DEM to LandXML or 12da Tin file
+
+<img width="1484" height="944" alt="image" src="https://github.com/user-attachments/assets/09782625-4f90-40d8-8e0a-8873b51093f9" />
 
