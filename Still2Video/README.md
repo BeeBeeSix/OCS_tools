@@ -1,6 +1,4 @@
-# OCS_tools: DEM to LandXML or 12da Tin file
+ OCS_tools: Actually Nothing to do with OCS - Its just only of my Pet Projects:
 
-<img width="1491" height="979" alt="image" src="https://github.com/user-attachments/assets/aa6b8ff3-3a03-43c0-a8b5-8e1f6d43c351" />
-
-https://data.linz.govt.nz/layer/121859-new-zealand-lidar-1m-dem/
+<img width="1437" height="1191" alt="image" src="https://github.com/user-attachments/assets/76018833-88c5-4630-969d-d83f94c4beb0" />
 
