@@ -10,6 +10,10 @@ Contour a AECC_TIN_Surface => AECC_TIN_contour_Gui.py  (REQUIRES A CUSTOM BUILD 
 
 <img width="1967" height="956" alt="image" src="https://github.com/user-attachments/assets/4f399db0-03c0-473a-a5f7-92d86e54dd0f" />
 
+Add 'PolyfaceMesh' 
+<img width="1477" height="602" alt="image" src="https://github.com/user-attachments/assets/6a48239b-8030-4dbb-9a07-6f051d32953d" />
+
+
 
 
 
